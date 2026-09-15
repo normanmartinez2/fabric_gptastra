@@ -1,0 +1,34 @@
+{
+    "workspace":  {
+                      "id":  "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+                      "displayName":  "My workspace",
+                      "description":  "",
+                      "type":  "Personal",
+                      "capacityId":  "3e5e80af-f06b-48c7-b4e6-03cea4ccd3f4",
+                      "domainId":  null,
+                      "apiEndpoint":  null
+                  },
+    "lakehouse":  {
+                      "id":  "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+                      "displayName":  "lh_medallion_demo",
+                      "workspaceId":  "36ef6570-f84b-4d04-8131-7f403f4a3f04"
+                  },
+    "connection":  {
+                       "id":  "cd43e245-ee02-48cc-9520-42ebb3595721",
+                       "displayName":  "github_raw_normanmartinez2",
+                       "connectivityType":  "ShareableCloud",
+                       "connectionDetails":  {
+                                                 "type":  "HttpServer",
+                                                 "path":  "https://raw.githubusercontent.com/normanmartinez2/"
+                                             },
+                       "privacyLevel":  "None",
+                       "credentialDetails":  {
+                                                 "credentialType":  "Anonymous",
+                                                 "singleSignOnType":  "None",
+                                                 "connectionEncryption":  "NotEncrypted",
+                                                 "skipTestConnection":  false
+                                             },
+                       "allowConnectionUsageInGateway":  false
+                   },
+    "pipelineId":  "38a25222-399d-4bac-8677-04a2acd2ddc4"
+}

@@ -1,0 +1,28 @@
+{
+  "environment": "dev",
+
+  "workspace_name": "My workspace",
+  "workspace_id": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+
+  "capacity_id": "3e5e80af-f06b-48c7-b4e6-03cea4ccd3f4",
+
+  "lakehouse_name": "lh_medallion_demo",
+  "pipeline_name": "pl_medallion_github",
+
+  "sources": {
+    "airports": "https://raw.githubusercontent.com/normanmartinez2/databricks_claude/refs/heads/main/airports.csv",
+    "passengers": "https://raw.githubusercontent.com/normanmartinez2/databricks_claude/refs/heads/main/passengers.csv",
+    "bookings": "https://raw.githubusercontent.com/normanmartinez2/databricks_claude/refs/heads/main/bookings.csv"
+  },
+
+  "paths": {
+    "bronze": "Files/bronze",
+    "bronze_airports": "Files/bronze/airports/airports.csv",
+    "bronze_passengers": "Files/bronze/passengers/passengers.csv",
+    "bronze_bookings": "Files/bronze/bookings/bookings.csv",
+
+    "silver": "Files/silver/bookings_enriched",
+
+    "gold": "Files/gold/bookings_by_city"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "workspace": {
+    "id": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+    "displayName": "My workspace",
+    "description": "",
+    "type": "Personal",
+    "capacityId": "3e5e80af-f06b-48c7-b4e6-03cea4ccd3f4",
+    "capacityRegion": "East US 2",
+    "oneLakeEndpoints": {
+      "blobEndpoint": "https://eastus2-onelake.blob.fabric.microsoft.com",
+      "dfsEndpoint": "https://eastus2-onelake.dfs.fabric.microsoft.com"
+    },
+    "capacityAssignmentProgress": "Completed"
+  },
+  "lakehouse": {
+    "id": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+    "type": "Lakehouse",
+    "displayName": "lh_medallion_demo",
+    "description": "",
+    "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+    "properties": {
+      "oneLakeTablesPath": "https://onelake.dfs.fabric.microsoft.com/36ef6570-f84b-4d04-8131-7f403f4a3f04/8429b9a8-1382-4024-b57d-f9afaeaddb25/Tables",
+      "oneLakeFilesPath": "https://onelake.dfs.fabric.microsoft.com/36ef6570-f84b-4d04-8131-7f403f4a3f04/8429b9a8-1382-4024-b57d-f9afaeaddb25/Files",
+      "sqlEndpointProperties": {
+        "connectionString": "ikuwbqljzcpufcuw7decs3kx3m-obs66nsl7ace3ajrp5ad6sr7aq.datawarehouse.fabric.microsoft.com",
+        "id": "7c9caa89-5c34-4a7e-9923-536e16bcf16a",
+        "provisioningStatus": "Success"
+      }
+    }
+  },
+  "notebooks": [
+    {
+      "id": "5db26a98-d8ae-40e2-86a0-9ce609a1a8be",
+      "type": "Notebook",
+      "displayName": "nb_silver_bookings_enriched",
+      "description": "",
+      "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04"
+    },
+    {
+      "id": "a13d249b-0485-41d7-ab6f-e758144f0e26",
+      "type": "Notebook",
+      "displayName": "nb_gold_bookings_by_city",
+      "description": "",
+      "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04"
+    }
+  ]
+}

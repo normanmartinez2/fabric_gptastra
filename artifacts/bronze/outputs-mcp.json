@@ -1,0 +1,203 @@
+{
+  "listing": {
+    "status": 200,
+    "message": "Success",
+    "results": {
+      "items": [
+        {
+          "name": "airports",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/airports",
+          "type": "directory",
+          "size": null,
+          "lastModified": "2026-09-14T20:56:21+02:00",
+          "contentType": "application/x-directory",
+          "etag": "0x8DF1291DDCB9068",
+          "permissions": "rwxr-x---",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": true,
+          "children": null
+        },
+        {
+          "name": "bookings",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/bookings",
+          "type": "directory",
+          "size": null,
+          "lastModified": "2026-09-14T20:56:21+02:00",
+          "contentType": "application/x-directory",
+          "etag": "0x8DF1291DE3C778C",
+          "permissions": "rwxr-x---",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": true,
+          "children": null
+        },
+        {
+          "name": "passengers",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/passengers",
+          "type": "directory",
+          "size": null,
+          "lastModified": "2026-09-14T20:56:27+02:00",
+          "contentType": "application/x-directory",
+          "etag": "0x8DF1291E18BE6C4",
+          "permissions": "rwxr-x---",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": true,
+          "children": null
+        },
+        {
+          "name": "airports.csv",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/airports/airports.csv",
+          "type": "file",
+          "size": 3294,
+          "lastModified": "2026-09-14T20:56:21+02:00",
+          "contentType": "application/octet-stream",
+          "etag": "0x8DF1291DDEAFC74",
+          "permissions": "rw-r-----",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": false,
+          "children": null
+        },
+        {
+          "name": "bookings.csv",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/bookings/bookings.csv",
+          "type": "file",
+          "size": 42316,
+          "lastModified": "2026-09-14T20:56:21+02:00",
+          "contentType": "application/octet-stream",
+          "etag": "0x8DF1291DE58FA2C",
+          "permissions": "rw-r-----",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": false,
+          "children": null
+        },
+        {
+          "name": "passengers.csv",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/passengers/passengers.csv",
+          "type": "file",
+          "size": 7555,
+          "lastModified": "2026-09-14T20:56:27+02:00",
+          "contentType": "application/octet-stream",
+          "etag": "0x8DF1291E1ADA448",
+          "permissions": "rw-r-----",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": false,
+          "children": null
+        }
+      ],
+      "rawResponse": null
+    },
+    "duration": 0
+  },
+  "downloads": {
+    "airports": {
+      "status": 200,
+      "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/bronze/target/airports.csv'.",
+      "results": {
+        "blob": {
+          "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+          "itemId": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+          "path": "Files/bronze/airports/airports.csv",
+          "contentLength": 3294,
+          "contentType": "application/octet-stream",
+          "charset": null,
+          "contentEncoding": null,
+          "contentLanguage": null,
+          "contentDisposition": null,
+          "contentMd5": null,
+          "contentCrc64": null,
+          "contentBase64": null,
+          "contentText": null,
+          "etag": "\"0x8DF1291DDEAFC74\"",
+          "lastModified": "2026-09-14T18:56:21+00:00",
+          "requestServerEncrypted": null,
+          "encryptionScope": null,
+          "encryptionKeySha256": null,
+          "version": "2023-11-03",
+          "versionId": null,
+          "requestId": "99ab7fc7-501e-0048-137a-4461e7000000",
+          "clientRequestId": null,
+          "rootActivityId": "b97c303d-ce90-4267-a74b-43aacf8c717e",
+          "contentFilePath": "C:/dev/fabric_project/artifacts/bronze/target/airports.csv",
+          "inlineContentTruncated": false
+        },
+        "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/bronze/target/airports.csv'."
+      },
+      "duration": 0
+    },
+    "passengers": {
+      "status": 200,
+      "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/bronze/target/passengers.csv'.",
+      "results": {
+        "blob": {
+          "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+          "itemId": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+          "path": "Files/bronze/passengers/passengers.csv",
+          "contentLength": 7555,
+          "contentType": "application/octet-stream",
+          "charset": null,
+          "contentEncoding": null,
+          "contentLanguage": null,
+          "contentDisposition": null,
+          "contentMd5": null,
+          "contentCrc64": null,
+          "contentBase64": null,
+          "contentText": null,
+          "etag": "\"0x8DF1291E1ADA448\"",
+          "lastModified": "2026-09-14T18:56:27+00:00",
+          "requestServerEncrypted": null,
+          "encryptionScope": null,
+          "encryptionKeySha256": null,
+          "version": "2023-11-03",
+          "versionId": null,
+          "requestId": "004ab057-401e-0060-0b7a-44220f000000",
+          "clientRequestId": null,
+          "rootActivityId": "d7e7581c-faf9-49cf-850a-a34f1cff50fc",
+          "contentFilePath": "C:/dev/fabric_project/artifacts/bronze/target/passengers.csv",
+          "inlineContentTruncated": false
+        },
+        "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/bronze/target/passengers.csv'."
+      },
+      "duration": 0
+    },
+    "bookings": {
+      "status": 200,
+      "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/bronze/target/bookings.csv'.",
+      "results": {
+        "blob": {
+          "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+          "itemId": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+          "path": "Files/bronze/bookings/bookings.csv",
+          "contentLength": 42316,
+          "contentType": "application/octet-stream",
+          "charset": null,
+          "contentEncoding": null,
+          "contentLanguage": null,
+          "contentDisposition": null,
+          "contentMd5": null,
+          "contentCrc64": null,
+          "contentBase64": null,
+          "contentText": null,
+          "etag": "\"0x8DF1291DE58FA2C\"",
+          "lastModified": "2026-09-14T18:56:21+00:00",
+          "requestServerEncrypted": null,
+          "encryptionScope": null,
+          "encryptionKeySha256": null,
+          "version": "2023-11-03",
+          "versionId": null,
+          "requestId": "6e5f7480-901e-002e-5c7a-440c87000000",
+          "clientRequestId": null,
+          "rootActivityId": "6e7a84d6-c4c5-4a94-9166-c6ddfda89c7c",
+          "contentFilePath": "C:/dev/fabric_project/artifacts/bronze/target/bookings.csv",
+          "inlineContentTruncated": false
+        },
+        "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/bronze/target/bookings.csv'."
+      },
+      "duration": 0
+    }
+  }
+}

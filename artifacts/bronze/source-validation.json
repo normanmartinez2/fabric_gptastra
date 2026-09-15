@@ -1,0 +1,66 @@
+{
+  "airports": {
+    "source": {
+      "rows": 50,
+      "headers": [
+        "airport_id",
+        "airport_name",
+        "city",
+        "country"
+      ],
+      "bytes": 3294,
+      "sha256": "3fc493226d543c03fc3882841d4a97873aa21cdeb3b13cf3cad076504752d943",
+      "schema": {
+        "airport_id": "string (CSV)",
+        "airport_name": "string (CSV)",
+        "city": "string (CSV)",
+        "country": "string (CSV)"
+      }
+    },
+    "join_keys_present": true
+  },
+  "passengers": {
+    "source": {
+      "rows": 200,
+      "headers": [
+        "passenger_id",
+        "name",
+        "gender",
+        "nationality"
+      ],
+      "bytes": 7555,
+      "sha256": "d2be026a3bb5dfee7e7b9717fc3af1c62e77cf24c0394ea9e12be7afbb969bb2",
+      "schema": {
+        "passenger_id": "string (CSV)",
+        "name": "string (CSV)",
+        "gender": "string (CSV)",
+        "nationality": "string (CSV)"
+      }
+    },
+    "join_keys_present": true
+  },
+  "bookings": {
+    "source": {
+      "rows": 1000,
+      "headers": [
+        "booking_id",
+        "passenger_id",
+        "flight_id",
+        "airport_id",
+        "amount",
+        "booking_date"
+      ],
+      "bytes": 42316,
+      "sha256": "451e18755915e66c5c146a103c4ce7830aeaf345acb3b3e6b970b690be57edec",
+      "schema": {
+        "booking_id": "string (CSV)",
+        "passenger_id": "string (CSV)",
+        "flight_id": "string (CSV)",
+        "airport_id": "string (CSV)",
+        "amount": "string (CSV)",
+        "booking_date": "string (CSV)"
+      }
+    },
+    "join_keys_present": true
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Copy_airports_to_bronze",
+        "type": "Copy",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.01:00:00",
+          "retry": 2,
+          "retryIntervalInSeconds": 30
+        },
+        "typeProperties": {
+          "source": {
+            "type": "BinarySource",
+            "storeSettings": {
+              "type": "HttpReadSettings",
+              "requestMethod": "GET"
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "HttpServerLocation",
+                  "relativeUrl": "databricks_claude/refs/heads/main/airports.csv"
+                }
+              },
+              "externalReferences": {
+                "connection": "cd43e245-ee02-48cc-9520-42ebb3595721"
+              }
+            }
+          },
+          "sink": {
+            "type": "BinarySink",
+            "storeSettings": {
+              "type": "LakehouseWriteSettings"
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "folderPath": "bronze/airports",
+                  "fileName": "airports.csv"
+                }
+              },
+              "linkedService": {
+                "name": "lh_medallion_demo",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+                    "artifactId": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+                    "rootFolder": "Files"
+                  }
+                }
+              }
+            }
+          },
+          "enableStaging": false
+        }
+      },
+      {
+        "name": "Copy_passengers_to_bronze",
+        "type": "Copy",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.01:00:00",
+          "retry": 2,
+          "retryIntervalInSeconds": 30
+        },
+        "typeProperties": {
+          "source": {
+            "type": "BinarySource",
+            "storeSettings": {
+              "type": "HttpReadSettings",
+              "requestMethod": "GET"
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "HttpServerLocation",
+                  "relativeUrl": "databricks_claude/refs/heads/main/passengers.csv"
+                }
+              },
+              "externalReferences": {
+                "connection": "cd43e245-ee02-48cc-9520-42ebb3595721"
+              }
+            }
+          },
+          "sink": {
+            "type": "BinarySink",
+            "storeSettings": {
+              "type": "LakehouseWriteSettings"
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "folderPath": "bronze/passengers",
+                  "fileName": "passengers.csv"
+                }
+              },
+              "linkedService": {
+                "name": "lh_medallion_demo",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+                    "artifactId": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+                    "rootFolder": "Files"
+                  }
+                }
+              }
+            }
+          },
+          "enableStaging": false
+        }
+      },
+      {
+        "name": "Copy_bookings_to_bronze",
+        "type": "Copy",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.01:00:00",
+          "retry": 2,
+          "retryIntervalInSeconds": 30
+        },
+        "typeProperties": {
+          "source": {
+            "type": "BinarySource",
+            "storeSettings": {
+              "type": "HttpReadSettings",
+              "requestMethod": "GET"
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "HttpServerLocation",
+                  "relativeUrl": "databricks_claude/refs/heads/main/bookings.csv"
+                }
+              },
+              "externalReferences": {
+                "connection": "cd43e245-ee02-48cc-9520-42ebb3595721"
+              }
+            }
+          },
+          "sink": {
+            "type": "BinarySink",
+            "storeSettings": {
+              "type": "LakehouseWriteSettings"
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "folderPath": "bronze/bookings",
+                  "fileName": "bookings.csv"
+                }
+              },
+              "linkedService": {
+                "name": "lh_medallion_demo",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+                    "artifactId": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+                    "rootFolder": "Files"
+                  }
+                }
+              }
+            }
+          },
+          "enableStaging": false
+        }
+      },
+      {
+        "name": "Notebook_Bronze_to_Silver",
+        "type": "TridentNotebook",
+        "dependsOn": [
+          {
+            "activity": "Copy_airports_to_bronze",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Copy_passengers_to_bronze",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Copy_bookings_to_bronze",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.01:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "5db26a98-d8ae-40e2-86a0-9ce609a1a8be",
+          "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04"
+        }
+      },
+      {
+        "name": "Notebook_Silver_to_Gold",
+        "type": "TridentNotebook",
+        "dependsOn": [
+          {
+            "activity": "Notebook_Bronze_to_Silver",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.01:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "a13d249b-0485-41d7-ab6f-e758144f0e26",
+          "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04"
+        }
+      }
+    ]
+  }
+}

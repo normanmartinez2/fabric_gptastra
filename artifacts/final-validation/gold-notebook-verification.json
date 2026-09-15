@@ -1,0 +1,8 @@
+{
+  "code_matches_approved": true,
+  "lakehouse_binding": {
+    "default_lakehouse": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+    "default_lakehouse_name": "lh_medallion_demo",
+    "default_lakehouse_workspace_id": "36ef6570-f84b-4d04-8131-7f403f4a3f04"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "jobInstanceId": "65199c56-d5c9-4af5-8670-e6aa79467129",
+  "pipelineId": "38a25222-399d-4bac-8677-04a2acd2ddc4",
+  "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+  "jobType": "Pipeline",
+  "invokeType": "Manual",
+  "status": "Failed",
+  "startTimeUtc": "2026-09-14T18:46:08.2312612",
+  "endTimeUtc": "2026-09-14T18:48:09.77",
+  "failureReason": {
+    "requestId": "c3e06bd2-9193-4b60-a83d-dc6877da7380",
+    "errorCode": "2200",
+    "message": "Operation on target Copy_passengers_to_bronze failed: ErrorCode=HttpRequestFailedWithClientError,'Type=Microsoft.DataTransfer.Common.Shared.HybridDeliveryException,Message=Http request failed with client error, status code 404 NotFound, please check your activity settings. If you configured a baseUrl that includes path, please make sure it ends with '/'.,Source=Microsoft.DataTransfer.ClientLibrary,''Type=System.Net.WebException,Message=The remote server returned an error: (404) Not Found.,Source=System,'",
+    "isRetriable": false
+  }
+}

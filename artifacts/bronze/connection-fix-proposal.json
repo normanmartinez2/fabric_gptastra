@@ -1,0 +1,24 @@
+{
+  "status": "Applied with explicit user authorization; outputs validated; see run-success.json",
+  "existingConnectionId": "0c0d5d64-2c92-40fc-ab07-a45c35d37827",
+  "renameExisting": {
+    "connectivityType": "ShareableCloud",
+    "displayName": "github_raw_normanmartinez2_without_trailing_slash"
+  },
+  "createReplacement": {
+    "connectionName": "github_raw_normanmartinez2",
+    "connectionType": "HttpServer",
+    "creationMethod": "HttpServer.Contents",
+    "connectivityType": "ShareableCloud",
+    "connectionParameters": "{\"url\":\"https://raw.githubusercontent.com/normanmartinez2/\"}",
+    "credentialType": "Anonymous",
+    "privacyLevel": "None",
+    "connectionEncryption": "NotEncrypted",
+    "skipTestConnection": false
+  },
+  "nextSteps": [
+    "Read back replacement connection and bind all three activities to its returned ID",
+    "Read back pipeline definition, execute, and validate all three output files"
+  ],
+  "deleteResources": false
+}

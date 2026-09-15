@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "message": "Pipeline run triggered successfully",
+  "pipelineId": "38a25222-399d-4bac-8677-04a2acd2ddc4",
+  "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+  "jobInstanceId": "2144c5bd-3038-4071-9d12-58f75afaa6d3",
+  "locationUrl": "https://api.fabric.microsoft.com/v1/workspaces/36ef6570-f84b-4d04-8131-7f403f4a3f04/items/38a25222-399d-4bac-8677-04a2acd2ddc4/jobs/instances/2144c5bd-3038-4071-9d12-58f75afaa6d3",
+  "hint": "Use GetPipelineRunStatusAsync with the jobInstanceId to check the run status"
+}

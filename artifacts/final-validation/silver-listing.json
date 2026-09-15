@@ -1,0 +1,38 @@
+{
+  "status": 200,
+  "message": "Success",
+  "results": {
+    "items": [
+      {
+        "name": "_SUCCESS",
+        "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/silver/bookings_enriched/_SUCCESS",
+        "type": "file",
+        "size": 0,
+        "lastModified": "2026-09-15T13:11:53+02:00",
+        "contentType": "application/octet-stream",
+        "etag": "0x8DF131A25C5A550",
+        "permissions": "rw-r-----",
+        "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+        "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+        "isDirectory": false,
+        "children": null
+      },
+      {
+        "name": "part-00000-4458da2d-e52b-4171-a238-dab6ab40cf24-c000.snappy.parquet",
+        "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/silver/bookings_enriched/part-00000-4458da2d-e52b-4171-a238-dab6ab40cf24-c000.snappy.parquet",
+        "type": "file",
+        "size": 32254,
+        "lastModified": "2026-09-15T13:11:52+02:00",
+        "contentType": "application/octet-stream",
+        "etag": "0x8DF131A2572C60C",
+        "permissions": "rw-r-----",
+        "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+        "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+        "isDirectory": false,
+        "children": null
+      }
+    ],
+    "rawResponse": null
+  },
+  "duration": 0
+}

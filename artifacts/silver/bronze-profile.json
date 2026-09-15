@@ -1,0 +1,122 @@
+{
+  "bookings": {
+    "path": "Files/bronze/bookings/bookings.csv",
+    "rows": 1000,
+    "columns": [
+      "booking_id",
+      "passenger_id",
+      "flight_id",
+      "airport_id",
+      "amount",
+      "booking_date"
+    ],
+    "sha256": "451e18755915e66c5c146a103c4ce7830aeaf345acb3b3e6b970b690be57edec",
+    "null_or_blank": {
+      "booking_id": 0,
+      "passenger_id": 0,
+      "flight_id": 0,
+      "airport_id": 0,
+      "amount": 0,
+      "booking_date": 0
+    },
+    "key_whitespace": {
+      "booking_id": 0,
+      "passenger_id": 0,
+      "flight_id": 0,
+      "airport_id": 0
+    },
+    "duplicate_excess": {
+      "booking_id": 0,
+      "passenger_id": 800,
+      "flight_id": 900,
+      "airport_id": 950
+    },
+    "logical_schema": {
+      "booking_id": "string",
+      "passenger_id": "string",
+      "flight_id": "string",
+      "airport_id": "string",
+      "amount": "decimal(18,2)",
+      "booking_date": "date (yyyy-MM-dd)"
+    }
+  },
+  "passengers": {
+    "path": "Files/bronze/passengers/passengers.csv",
+    "rows": 200,
+    "columns": [
+      "passenger_id",
+      "name",
+      "gender",
+      "nationality"
+    ],
+    "sha256": "d2be026a3bb5dfee7e7b9717fc3af1c62e77cf24c0394ea9e12be7afbb969bb2",
+    "null_or_blank": {
+      "passenger_id": 0,
+      "name": 0,
+      "gender": 0,
+      "nationality": 0
+    },
+    "key_whitespace": {
+      "passenger_id": 0
+    },
+    "duplicate_excess": {
+      "passenger_id": 0
+    },
+    "logical_schema": {
+      "passenger_id": "string",
+      "name": "string",
+      "gender": "string",
+      "nationality": "string"
+    }
+  },
+  "airports": {
+    "path": "Files/bronze/airports/airports.csv",
+    "rows": 50,
+    "columns": [
+      "airport_id",
+      "airport_name",
+      "city",
+      "country"
+    ],
+    "sha256": "3fc493226d543c03fc3882841d4a97873aa21cdeb3b13cf3cad076504752d943",
+    "null_or_blank": {
+      "airport_id": 0,
+      "airport_name": 0,
+      "city": 0,
+      "country": 0
+    },
+    "key_whitespace": {
+      "airport_id": 0
+    },
+    "duplicate_excess": {
+      "airport_id": 0
+    },
+    "logical_schema": {
+      "airport_id": "string",
+      "airport_name": "string",
+      "city": "string",
+      "country": "string"
+    }
+  },
+  "types": {
+    "amount_min": "102.97",
+    "amount_max": "1499.02",
+    "amount_max_scale": 2,
+    "date_min": "2025-03-24",
+    "date_max": "2025-06-21"
+  },
+  "joins": {
+    "passenger_id": {
+      "unmatched_bookings": 0,
+      "dimension_max_multiplicity": 1,
+      "expected_join_rows": 1000
+    },
+    "airport_id": {
+      "unmatched_bookings": 0,
+      "dimension_max_multiplicity": 1,
+      "expected_join_rows": 1000
+    }
+  },
+  "expected_silver_rows": 1000,
+  "silver_executed": false
+}

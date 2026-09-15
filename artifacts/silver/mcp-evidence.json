@@ -1,0 +1,209 @@
+{
+  "notebook": {
+    "status": 200,
+    "message": "Success",
+    "results": "# Notebook definition\r\n\r\nThis article provides a breakdown of the definition structure for notebook items.\r\n\r\n## Supported formats\r\n\r\nNotebook items support `FabricGitSource` and `ipynb` formats. If no format is specified it will default to `FabricGitSource`.  \r\n\r\n> [!NOTE]\r\n>\r\n> The `FabricGitSource` format returns notebook content in the file format corresponding to the selected language. For example, if PySpark is selected, the content will be returned as a `.py` file.\r\n\r\n## Definition parts\r\n\r\nThe definition of a notebook item is made out of a single part, and is constructed as follows:\r\n\r\n* **Path** : The file name, for example `artifact.content.ipynb`. \r\n    - for PySpark or Python: `notebook-content.py`\r\n    - for Spark SQL: `notebook-content.sql` \r\n    - for Spark (Scala): `notebook-content.scala`\r\n    - for SparkR (R): `notebook-content.r`\r\n\r\n* **Payload type** - InlineBase64\r\n\r\n* **Payload** See: [Example of payload content decoded from Base64](#example-of-ipynb-format-payload-content-decoded-from-base64).\r\n\r\n### Example of ipynb format payload content decoded from Base64\r\n\r\n```json\r\n{\r\n    \"nbformat\": 4,\r\n    \"nbformat_minor\": 5,\r\n    \"cells\": [\r\n        {\r\n            \"cell_type\": \"code\",\r\n            \"source\": [\"# Welcome to your new notebook\\n# Type here in the cell editor to add code!\\n\"],\r\n            \"execution_count\": null,\r\n            \"outputs\": [],\r\n            \"metadata\": {}\r\n        }\r\n    ],\r\n    \"metadata\": {\r\n        \"language_info\": {\r\n            \"name\": \"python\"\r\n        }\r\n    }\r\n}\r\n```\r\n\r\n## Definition example for ipynb\r\n\r\n```json\r\n{\r\n    \"format\": \"ipynb\",\r\n    \"parts\": [\r\n        {\r\n            \"path\": \"artifact.content.ipynb\",\r\n            \"payload\": \"eyJuYmZvcm1hdCI6NCwibmJmb3JtYXR_fbWlub3IiOjUsImNlbGxzIjpbeyJjZWxsX3R5cGUiOiJjb2RlIiwic291cmNlIjpbIiMgV2VsY29tZSB0byB5b3VyIG5ldyBub3RlYm9va1xuIyBUeXBlIGhlcmUgaW4gdGhlIGNlbGwgZWRpdG9yIHRvIGFkZCBjb2RlIVxuIl0sImV4ZWN1dGlvbl9jb3VudCI6bnVsbCwib3V0cHV0cyI6W10sIm1ldGFkYXRhIjp7fX1dLCJtZXRhZGF0YSI6eyJsYW5ndWFnZV9pbmZvIjp7Im5hbWUiOiJweXRob24ifX19\",\r\n            \"payloadType\": \"InlineBase64\"\r\n        },\r\n        {\r\n            \"path\": \".platform\",\r\n            \"payload\": \"ZG90UGxhdGZvcm1CYXNlNjRTdHJpbmc=\",\r\n            \"payloadType\": \"InlineBase64\"\r\n        }\r\n    ]\r\n}\r\n```\r\n\r\n### Example of fabric git resource format payload content decoded from Base64 \r\n\r\n```python\r\n# Fabric notebook source \r\n# METADATA ******************** \r\n# META { \r\n# META   \"kernel_info\": { \r\n# META     \"name\": \"synapse_pyspark\" \r\n# META   }, \r\n# META   \"dependencies\": {} \r\n# META } \r\n# CELL ******************** \r\n# Welcome to your new notebook \r\n# Type here in the cell editor to add code! \r\n# METADATA ******************** \r\n# META { \r\n# META   \"language\": \"python\", \r\n# META   \"language_group\": \"synapse_pyspark\" \r\n# META } \r\n```\r\n\r\n### Definition example for fabricGitSource\r\n\r\n```json\r\n{\r\n    \"format\": \"fabricGitSource\",\r\n    \"parts\": [\r\n        {\r\n            \"path\": \"notebook-content.py\",\r\n            \"payload\": \"ewogICIkc2NoZW1hIjogImh0dHBzOi8vZGV2ZWxvcGVyLm1pY3Jvc29mdC5jb20vanNvbi1zY2hlbWFzL2ZhYnJpYy9naXRJbnRlZ3JhdGlvbi9wbGF0Zm9ybVByb3BlcnRpZXMvMi4wLjAvc2NoZW1hLmpzb24iLAogICJtZXRhZGF0YSI6IHsKICAgICJ0eXBlIjogIk5vdGVib29rIiwKICAgICJkaXNwbGF5TmFtZSI6ICJOb3RlYm9vayA4IiwKICAgICJkZXNjcmlwdGlvbiI6ICJOZXcgbm90ZWJvb2siCiAgfSwKICAiY29uZmlnIjogewogICAgInZlcnNpb24iOiAiMi4wIiwKICAgICJsb2dpY2FsSWQiOiAiMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDAwMDAwMDAwIgogIH0KfQ==\",\r\n            \"payloadType\": \"InlineBase64\"\r\n        },\r\n        {\r\n            \"path\": \".platform\",\r\n            \"payload\": \"ZG90UGxhdGZvcm1CYXNlNjRTdHJpbmc=\",\r\n            \"payloadType\": \"InlineBase64\"\r\n        }\r\n    ]\r\n}\r\n```",
+    "duration": 0
+  },
+  "bronze": {
+    "status": 200,
+    "message": "Success",
+    "results": {
+      "items": [
+        {
+          "name": "airports",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/airports",
+          "type": "directory",
+          "size": null,
+          "lastModified": "2026-09-14T20:56:21+02:00",
+          "contentType": "application/x-directory",
+          "etag": "0x8DF1291DDCB9068",
+          "permissions": "rwxr-x---",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": true,
+          "children": null
+        },
+        {
+          "name": "bookings",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/bookings",
+          "type": "directory",
+          "size": null,
+          "lastModified": "2026-09-14T20:56:21+02:00",
+          "contentType": "application/x-directory",
+          "etag": "0x8DF1291DE3C778C",
+          "permissions": "rwxr-x---",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": true,
+          "children": null
+        },
+        {
+          "name": "passengers",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/passengers",
+          "type": "directory",
+          "size": null,
+          "lastModified": "2026-09-14T20:56:27+02:00",
+          "contentType": "application/x-directory",
+          "etag": "0x8DF1291E18BE6C4",
+          "permissions": "rwxr-x---",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": true,
+          "children": null
+        },
+        {
+          "name": "airports.csv",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/airports/airports.csv",
+          "type": "file",
+          "size": 3294,
+          "lastModified": "2026-09-14T20:56:21+02:00",
+          "contentType": "application/octet-stream",
+          "etag": "0x8DF1291DDEAFC74",
+          "permissions": "rw-r-----",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": false,
+          "children": null
+        },
+        {
+          "name": "bookings.csv",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/bookings/bookings.csv",
+          "type": "file",
+          "size": 42316,
+          "lastModified": "2026-09-14T20:56:21+02:00",
+          "contentType": "application/octet-stream",
+          "etag": "0x8DF1291DE58FA2C",
+          "permissions": "rw-r-----",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": false,
+          "children": null
+        },
+        {
+          "name": "passengers.csv",
+          "path": "8429b9a8-1382-4024-b57d-f9afaeaddb25/Files/bronze/passengers/passengers.csv",
+          "type": "file",
+          "size": 7555,
+          "lastModified": "2026-09-14T20:56:27+02:00",
+          "contentType": "application/octet-stream",
+          "etag": "0x8DF1291E1ADA448",
+          "permissions": "rw-r-----",
+          "owner": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "group": "bdb39224-bd86-4d14-bc6e-18637e6902b0",
+          "isDirectory": false,
+          "children": null
+        }
+      ],
+      "rawResponse": null
+    },
+    "duration": 0
+  },
+  "downloads": {
+    "bookings": {
+      "status": 200,
+      "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/silver/bronze/bookings.csv'.",
+      "results": {
+        "blob": {
+          "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+          "itemId": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+          "path": "Files/bronze/bookings/bookings.csv",
+          "contentLength": 42316,
+          "contentType": "application/octet-stream",
+          "charset": null,
+          "contentEncoding": null,
+          "contentLanguage": null,
+          "contentDisposition": null,
+          "contentMd5": null,
+          "contentCrc64": null,
+          "contentBase64": null,
+          "contentText": null,
+          "etag": "\"0x8DF1291DE58FA2C\"",
+          "lastModified": "2026-09-14T18:56:21+00:00",
+          "requestServerEncrypted": null,
+          "encryptionScope": null,
+          "encryptionKeySha256": null,
+          "version": "2023-11-03",
+          "versionId": null,
+          "requestId": "ef45499d-c01e-004a-2e7b-44fba1000000",
+          "clientRequestId": null,
+          "rootActivityId": "5c51dcc8-2c91-4ded-9169-d330b3bb9a6b",
+          "contentFilePath": "C:/dev/fabric_project/artifacts/silver/bronze/bookings.csv",
+          "inlineContentTruncated": false
+        },
+        "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/silver/bronze/bookings.csv'."
+      },
+      "duration": 0
+    },
+    "passengers": {
+      "status": 200,
+      "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/silver/bronze/passengers.csv'.",
+      "results": {
+        "blob": {
+          "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+          "itemId": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+          "path": "Files/bronze/passengers/passengers.csv",
+          "contentLength": 7555,
+          "contentType": "application/octet-stream",
+          "charset": null,
+          "contentEncoding": null,
+          "contentLanguage": null,
+          "contentDisposition": null,
+          "contentMd5": null,
+          "contentCrc64": null,
+          "contentBase64": null,
+          "contentText": null,
+          "etag": "\"0x8DF1291E1ADA448\"",
+          "lastModified": "2026-09-14T18:56:27+00:00",
+          "requestServerEncrypted": null,
+          "encryptionScope": null,
+          "encryptionKeySha256": null,
+          "version": "2023-11-03",
+          "versionId": null,
+          "requestId": "ae0ef018-001e-006a-5c7b-44a4f8000000",
+          "clientRequestId": null,
+          "rootActivityId": "024bea7f-7f73-4eb2-9a3f-788109ecf654",
+          "contentFilePath": "C:/dev/fabric_project/artifacts/silver/bronze/passengers.csv",
+          "inlineContentTruncated": false
+        },
+        "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/silver/bronze/passengers.csv'."
+      },
+      "duration": 0
+    },
+    "airports": {
+      "status": 200,
+      "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/silver/bronze/airports.csv'.",
+      "results": {
+        "blob": {
+          "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+          "itemId": "8429b9a8-1382-4024-b57d-f9afaeaddb25",
+          "path": "Files/bronze/airports/airports.csv",
+          "contentLength": 3294,
+          "contentType": "application/octet-stream",
+          "charset": null,
+          "contentEncoding": null,
+          "contentLanguage": null,
+          "contentDisposition": null,
+          "contentMd5": null,
+          "contentCrc64": null,
+          "contentBase64": null,
+          "contentText": null,
+          "etag": "\"0x8DF1291DDEAFC74\"",
+          "lastModified": "2026-09-14T18:56:21+00:00",
+          "requestServerEncrypted": null,
+          "encryptionScope": null,
+          "encryptionKeySha256": null,
+          "version": "2023-11-03",
+          "versionId": null,
+          "requestId": "66f9d514-901e-0052-027b-44d634000000",
+          "clientRequestId": null,
+          "rootActivityId": "38d51409-6056-47bc-a1df-07abff6a35cc",
+          "contentFilePath": "C:/dev/fabric_project/artifacts/silver/bronze/airports.csv",
+          "inlineContentTruncated": false
+        },
+        "message": "File downloaded to local file 'C:/dev/fabric_project/artifacts/silver/bronze/airports.csv'."
+      },
+      "duration": 0
+    }
+  }
+}

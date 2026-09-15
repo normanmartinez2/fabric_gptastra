@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "jobInstanceId": "55cca996-654a-4452-8f16-ff10f95ca5d3",
+  "pipelineId": "38a25222-399d-4bac-8677-04a2acd2ddc4",
+  "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+  "jobType": "Pipeline",
+  "invokeType": "Manual",
+  "status": "Completed",
+  "startTimeUtc": "2026-09-15T05:58:06.7656432",
+  "endTimeUtc": "2026-09-15T06:07:29.46",
+  "failureReason": null
+}

@@ -1,0 +1,106 @@
+{
+  "value": [
+    {
+      "sparkApplicationId": "application_1789470857771_0001",
+      "state": "Succeeded",
+      "livyId": "d951ed68-38a3-4d01-976c-85e877d69dd9",
+      "origin": "SubmittedJob",
+      "attemptNumber": 0,
+      "maxNumberOfAttempts": 0,
+      "livyName": "nb_gold_bookings_by_city_d951ed68-38a3-4d01-976c-85e877d69dd9",
+      "submitter": {
+        "id": "9b7a7327-24ed-4fe8-8715-fe6b818f0a99",
+        "type": "User"
+      },
+      "item": {
+        "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+        "itemId": "a13d249b-0485-41d7-ab6f-e758144f0e26",
+        "referenceType": "ById"
+      },
+      "itemName": "nb_gold_bookings_by_city",
+      "itemType": "notebook",
+      "jobType": "SparkSession",
+      "submittedDateTime": "2026-09-15T11:12:36Z",
+      "startDateTime": "2026-09-15T11:14:19Z",
+      "endDateTime": "2026-09-15T11:15:56Z",
+      "queuedDuration": {
+        "value": 103,
+        "timeUnit": "Seconds"
+      },
+      "runningDuration": {
+        "value": 97,
+        "timeUnit": "Seconds"
+      },
+      "totalDuration": {
+        "value": 200,
+        "timeUnit": "Seconds"
+      },
+      "jobInstanceId": "a0705ac0-f5bc-45c9-8d7b-945d3843311e",
+      "creatorItem": {
+        "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+        "itemId": "a13d249b-0485-41d7-ab6f-e758144f0e26",
+        "referenceType": "ById"
+      },
+      "isHighConcurrency": false,
+      "cancellationReason": "System stopped the Spark session upon completion of the notebook run",
+      "capacityId": "3e5e80af-f06b-48c7-b4e6-03cea4ccd3f4",
+      "operationName": "Notebook Pipeline Run",
+      "consumerIdentity": {
+        "id": "9b7a7327-24ed-4fe8-8715-fe6b818f0a99",
+        "type": "User"
+      },
+      "runtimeVersion": "1.2"
+    },
+    {
+      "sparkApplicationId": "application_1789452330549_0001",
+      "state": "Succeeded",
+      "livyId": "7588b3a2-92ff-4647-890b-b50b9383e962",
+      "origin": "SubmittedJob",
+      "attemptNumber": 0,
+      "maxNumberOfAttempts": 0,
+      "livyName": "nb_gold_bookings_by_city_7588b3a2-92ff-4647-890b-b50b9383e962",
+      "submitter": {
+        "id": "9b7a7327-24ed-4fe8-8715-fe6b818f0a99",
+        "type": "User"
+      },
+      "item": {
+        "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+        "itemId": "a13d249b-0485-41d7-ab6f-e758144f0e26",
+        "referenceType": "ById"
+      },
+      "itemName": "nb_gold_bookings_by_city",
+      "itemType": "notebook",
+      "jobType": "SparkSession",
+      "submittedDateTime": "2026-09-15T06:02:54Z",
+      "startDateTime": "2026-09-15T06:05:37Z",
+      "endDateTime": "2026-09-15T06:07:05Z",
+      "queuedDuration": {
+        "value": 163,
+        "timeUnit": "Seconds"
+      },
+      "runningDuration": {
+        "value": 88,
+        "timeUnit": "Seconds"
+      },
+      "totalDuration": {
+        "value": 251,
+        "timeUnit": "Seconds"
+      },
+      "jobInstanceId": "ad88628e-7d20-47d4-a869-aa36a82626c0",
+      "creatorItem": {
+        "workspaceId": "36ef6570-f84b-4d04-8131-7f403f4a3f04",
+        "itemId": "a13d249b-0485-41d7-ab6f-e758144f0e26",
+        "referenceType": "ById"
+      },
+      "isHighConcurrency": false,
+      "cancellationReason": "System stopped the Spark session upon completion of the notebook run",
+      "capacityId": "3e5e80af-f06b-48c7-b4e6-03cea4ccd3f4",
+      "operationName": "Notebook Pipeline Run",
+      "consumerIdentity": {
+        "id": "9b7a7327-24ed-4fe8-8715-fe6b818f0a99",
+        "type": "User"
+      },
+      "runtimeVersion": "1.2"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": {
+    "booking_id": "string",
+    "passenger_id": "string",
+    "flight_id": "string",
+    "airport_id": "string",
+    "amount": "decimal128(18, 2)",
+    "booking_date": "date32[day]",
+    "passenger_name": "string",
+    "passenger_gender": "string",
+    "passenger_nationality": "string",
+    "airport_name": "string",
+    "city": "string",
+    "airport_country": "string"
+  },
+  "input_rows": 1000,
+  "null_city": 0,
+  "blank_city": 0,
+  "distinct_nonblank_city": 50,
+  "padded_city": 0
+}

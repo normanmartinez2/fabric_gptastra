@@ -1,0 +1,17 @@
+{
+  "id": "cd43e245-ee02-48cc-9520-42ebb3595721",
+  "displayName": "github_raw_normanmartinez2",
+  "connectivityType": "ShareableCloud",
+  "connectionDetails": {
+    "type": "HttpServer",
+    "path": "https://raw.githubusercontent.com/normanmartinez2/"
+  },
+  "privacyLevel": "None",
+  "credentialDetails": {
+    "credentialType": "Anonymous",
+    "singleSignOnType": "None",
+    "connectionEncryption": "NotEncrypted",
+    "skipTestConnection": false
+  },
+  "allowConnectionUsageInGateway": false
+}

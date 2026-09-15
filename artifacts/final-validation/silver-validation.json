@@ -1,0 +1,39 @@
+{
+  "input_counts": {
+    "bookings": 1000,
+    "passengers": 200,
+    "airports": 50
+  },
+  "bronze_unchanged": {
+    "bookings": true,
+    "passengers": true,
+    "airports": true
+  },
+  "silver_path": "Files/silver/bookings_enriched",
+  "schema": {
+    "booking_id": "string",
+    "passenger_id": "string",
+    "flight_id": "string",
+    "airport_id": "string",
+    "amount": "decimal128(18, 2)",
+    "booking_date": "date32[day]",
+    "passenger_name": "string",
+    "passenger_gender": "string",
+    "passenger_nationality": "string",
+    "airport_name": "string",
+    "city": "string",
+    "airport_country": "string"
+  },
+  "parquet_files": [
+    "part-00000-4458da2d-e52b-4171-a238-dab6ab40cf24-c000.snappy.parquet"
+  ],
+  "bronze_sha256": {
+    "bookings": "451e18755915e66c5c146a103c4ce7830aeaf345acb3b3e6b970b690be57edec",
+    "passengers": "d2be026a3bb5dfee7e7b9717fc3af1c62e77cf24c0394ea9e12be7afbb969bb2",
+    "airports": "3fc493226d543c03fc3882841d4a97873aa21cdeb3b13cf3cad076504752d943"
+  },
+  "silver_rows": 1000,
+  "schema_matches": true,
+  "full_join_content_matches": true,
+  "status": "Passed"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "Succeeded",
+  "silver_rows": 1000,
+  "eligible_rows": 1000,
+  "excluded_rows": 0,
+  "gold_rows": 50,
+  "booking_count_sum": 1000,
+  "schema": [
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "booking_count",
+      "type": "int64"
+    }
+  ],
+  "silver_content_unchanged": true,
+  "all_city_aggregates_match": true
+}
